@@ -1,8 +1,6 @@
 import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta
-import json2html
-from json2html import *
 import json
 import os
 datetoday=date.today()
@@ -10,17 +8,16 @@ d1=datetoday.strftime("%Y-%m-%d")
 print(d1)
 date3months=datetoday+relativedelta(months=+3)
 print (date3months)
-url = f'https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=off&year=now&month=x&start={d1}&end=2022-12-30&ss=off&mf=off&c=on&'
-resp = requests.get(url=url)
+url = f'https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=off&year=now&month=x&start={d1}&end={date3months}&ss=off&mf=off&c=on&'
+resp = requests.get(url=url,verify=False)
 data = resp.json()
 data = json.dumps(data, indent = 4)
 print(type(data))
 result={'items':[]}
-x=[]
 resultlist=[]
 import os
-if os.path.exists("output.html"):
-  os.remove("output.html")
+if os.path.exists("output.txt"):
+  os.remove("output.txt")
 else:
   print("The file does not exist")
 data=eval(data)
