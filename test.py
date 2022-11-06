@@ -3,6 +3,10 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 import json
 import os
+import http.server
+import socketserver
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import ssl
 datetoday=date.today()
 d1=datetoday.strftime("%Y-%m-%d")
 print(d1)
@@ -27,20 +31,7 @@ fl=open('output.txt', 'w')
 json.dump(result,fl,indent=4)
 fl.close()
 print(result)
-#json_load = json.loads(data)
-import os
-if os.path.exists("output.json"):
-  os.remove("output.json")
-else:
-  print("The file does not exist")
 
-#json2html.convert(json=result)
-#print(result)
-#exit()
-import http.server
-import socketserver
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import ssl
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
