@@ -70,12 +70,12 @@ Vagrant.configure("2") do |config|
     yum update
     yum install -y apache2
     yum install -y python3
-	yum install -y epel-release
+    yum install -y epel-release
 	#sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 	#sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-	yum install -y python3-pip.noarch
-	pip3 install -r /vagrant/requirements.txt
-	python3 /vagrant/test.py
+    yum install -y python3-pip.noarch
+    pip3 install -r /vagrant/requirements.txt
+    python3 /vagrant/test.py
   #config.vm.provision :shell, path: "install.sh", privileged: false
   #config.vm.provision :shell, :path => "python test.py"
   SHELL
