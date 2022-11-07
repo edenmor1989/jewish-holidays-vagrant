@@ -9,6 +9,8 @@ pre-requiesists- (for windows machine):
 
 2- virtualbox installed. 
 
+3- gitbash installed (to clone the repo)
+
 how to activate the script:
 
 -open cmd 
