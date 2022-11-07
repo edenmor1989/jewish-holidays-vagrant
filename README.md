@@ -9,8 +9,13 @@ pre-requiesists- (for windows machine):
 
 how to activate the script:
 -open cmd 
+
 -go to /c/hashicorp/Vagrant/bin/
+
 -do git clone to this repo
+
 -cd to the downloaded directory
+
 -now do vagrant.exe up
+
 go to browser and type : 127.0.0.1:8082
