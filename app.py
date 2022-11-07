@@ -18,8 +18,6 @@ data = resp.json()
 data = json.dumps(data, indent = 4)
 print(type(data))
 result={'items':[]}
-resultlist=[]
-import os
 if os.path.exists("output.txt"):
   os.remove("output.txt")
 else:
