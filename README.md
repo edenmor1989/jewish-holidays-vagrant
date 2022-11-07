@@ -1,7 +1,7 @@
 this project pulls the jewish holiday via api request for the next 3 months, and displays it in json format on localhost on port 8082 127.0.0.1:8082
 
 
-it deploys Centos7 on virtualbox , and then install the required components to accomplish the mission, e.g. python3, pip, etc (can be seen in Vagrant file)
+it deploys Centos7 on virtualbox , install the required components to accomplish the mission, e.g. python3, pip, etc (can be seen in Vagrant file), and than runs a python app to display the requested content.
 
 pre-requiesists- (for windows machine):
 
