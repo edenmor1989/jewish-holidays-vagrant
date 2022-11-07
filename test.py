@@ -42,7 +42,7 @@ handler_object = MyHttpRequestHandler
 
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-context.load_cert_chain("/vagrant/cert.pem") # PUT YOUR cert.pem HERE
+context.load_cert_chain("/home/vagrant/cert.pem") # PUT YOUR cert.pem HERE
 server_address = ("", 8082)
 with socketserver.TCPServer(server_address, handler_object) as httpd:
     httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
