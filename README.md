@@ -22,4 +22,4 @@ how to activate the script:
 
 NOTE- please wait until it deploys the VM compeletly, it should take several minutes
 
-go to browser and type : 127.0.0.1:8082
+go to browser and type : https://127.0.0.1:8082
