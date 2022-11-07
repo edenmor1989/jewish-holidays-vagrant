@@ -4,7 +4,9 @@ this project pulls the jewish holiday via api request for the next 3 months, and
 it deploys Centos7 on virtualbox , and then install the required components to accomplish the mission, e.g. python3, pip, etc (can be seen in Vagrant file)
 
 pre-requiesists- (for windows machine):
+
 1- vagrant installed. 
+
 2- virtualbox installed. 
 
 how to activate the script:
