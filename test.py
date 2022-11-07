@@ -38,11 +38,12 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.path = 'output.txt'
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
-# Create an object of the above class
 handler_object = MyHttpRequestHandler
 
-PORT = 8082
-my_server = socketserver.TCPServer(("", PORT), handler_object)
 
-# Star the server
-my_server.serve_forever()
+context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+context.load_cert_chain("/vagrant/cert.pem") # PUT YOUR cert.pem HERE
+server_address = ("", 8082)
+with socketserver.TCPServer(server_address, handler_object) as httpd:
+    httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
+    httpd.serve_forever()
