@@ -74,7 +74,7 @@ Vagrant.configure("2") do |config|
 	#sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 	#sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
     yum install -y python3-pip.noarch
-    openssl req -new -x509 -keyout cert.pem -out cert.pem -days 365 -nodes
+    openssl req -new -x509 -keyout cert.pem -out cert.pem -days 365 -nodes -subj "/C=/ST=/L=/O=/CN=localhost"
     pip3 install -r /vagrant/requirements.txt
     python3 /vagrant/test.py
   #config.vm.provision :shell, :path => "python test.py"
