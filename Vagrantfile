@@ -76,7 +76,7 @@ Vagrant.configure("2") do |config|
     yum install -y python3-pip.noarch
     openssl req -new -x509 -keyout cert.pem -out cert.pem -days 365 -nodes -subj "/C=/ST=/L=/O=/CN=localhost"
     pip3 install -r /vagrant/requirements.txt
-    python3 /vagrant/test.py
+    python3 /vagrant/app.py
   #config.vm.provision :shell, :path => "python test.py"
   SHELL
   
