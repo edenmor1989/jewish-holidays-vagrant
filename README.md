@@ -20,4 +20,6 @@ how to activate the script:
 
 -now do vagrant.exe up
 
+NOTE- please wait until it deploys the VM compeletly, it should take several minutes
+
 go to browser and type : 127.0.0.1:8082
