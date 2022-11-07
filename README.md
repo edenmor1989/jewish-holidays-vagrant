@@ -14,7 +14,7 @@ how to activate the script:
 
 -go to /c/hashicorp/Vagrant/bin/
 
--do git clone to this repo
+-do git clone https://github.com/edenmor1989/jewish-holidays-vagrant.git
 
 -cd to the downloaded directory
 
