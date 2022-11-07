@@ -16,7 +16,6 @@ url = f'https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=off&y
 resp = requests.get(url=url,verify=False)
 data = resp.json()
 data = json.dumps(data, indent = 4)
-print(type(data))
 result={'items':[]}
 if os.path.exists("output.txt"):
   os.remove("output.txt")
