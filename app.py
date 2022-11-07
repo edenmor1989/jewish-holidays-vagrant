@@ -1,4 +1,4 @@
- import requests
+import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta
 import json
@@ -39,8 +39,6 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
 handler_object = MyHttpRequestHandler
-
-
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
 context.load_cert_chain("/home/vagrant/cert.pem") # PUT YOUR cert.pem HERE
 server_address = ("", 8082)
