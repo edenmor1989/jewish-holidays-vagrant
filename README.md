@@ -12,13 +12,11 @@ pre-requiesists- (for windows machine):
 how to activate the script:
 -open cmd 
 
--go to /c/hashicorp/Vagrant/bin/
-
 -do git clone https://github.com/edenmor1989/jewish-holidays-vagrant.git
 
 -cd to the downloaded directory
 
--now do vagrant.exe up
+-now do vagrant.exe up 
 
 NOTE- please wait until it deploys the VM compeletly, it should take several minutes
 
