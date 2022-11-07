@@ -10,6 +10,7 @@ pre-requiesists- (for windows machine):
 2- virtualbox installed. 
 
 how to activate the script:
+
 -open cmd 
 
 -do git clone https://github.com/edenmor1989/jewish-holidays-vagrant.git
